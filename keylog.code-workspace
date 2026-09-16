@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "keylog",
+			"path": "../keylog"
+		},
+		{
+			"name": "piano-practice-logger",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "piano-practice-logger"
+	}
+}
