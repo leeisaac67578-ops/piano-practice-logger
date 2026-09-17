@@ -2,17 +2,91 @@
 <html>
   <head>
     <title>keylog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+      button {
+        border: none;
+        cursor: pointer;
+      }
+
+      body {
+        background-color: rgba(0, 0, 0, 0.842);
+        font-family: 'Roboto', sans-serif;
+      }
       .home-btn {
         height: 50px;
         width: 55px;
         cursor: pointer;
+        background-color: rgb(215, 131, 145);
+        border-radius: 10px;
+        transition: 0.5s;
+        border-color: black;
       }
 
       .home-btn img{
         width: 100%;
         height: 100%;
       }
+
+      .home-btn:hover {
+        background-color: rgb(230, 63, 91);
+        box-shadow: 4px 4px 12px rgba(2,2,0,0.2);
+      }
+
+      .btn {
+        
+        border-radius: 10px;
+        font-size: 40px;  
+        width: 500px;
+        height: 100px;
+        background-color: rgb(131, 74, 185);
+        color: black; 
+        padding: 30px;
+        transition: 0.5s;
+
+      }
+
+      .btn:hover {
+        background-color: rgb(100, 5, 188);
+        box-shadow: 3px 3px 3px 3px rgba(58, 7, 80, 0.677);
+      }
+
+      .button-group{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+
+      }
+
+      .search-bar {
+        padding: 10px;
+        width: 400px;
+        border-radius: 10px;
+        height: 25px;
+        margin-left: 70px;
+      }
+
+      .home-btn, .search-bar {
+        vertical-align: top;
+      }
+
+      .title-input {
+        border-radius: 10px;
+        font-size: 40px;
+        width: 500px;
+        height: 100px;
+        padding: 30px;
+        display: none;
+
+      }
+
+
+
 
     </style>
 
@@ -21,6 +95,22 @@
     <button class="home-btn">
       <img src="home.png" alt="Home">      
     </button>
+
+    <input type="text" placeholder="Search..." class="search-bar">
+
+    <div class="button-group">
+      <button class="btn">
+        add a piano piece +
+      </button>
+      
+      <a href="pieces.html">
+        <button class="btn">
+          your repertoire
+        </button>
+      </a>
+    </div>
+
+    <input type="text" class="title-input" placeholder="Piece title...">
     
   </body>
 </html>
