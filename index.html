@@ -45,7 +45,6 @@
         color: black; 
         padding: 30px;
         transition: 0.5s;
-
       }
 
       .btn:hover {
@@ -53,14 +52,13 @@
         box-shadow: 3px 3px 3px 3px rgba(58, 7, 80, 0.677);
       }
 
-      .button-group{
+      .button-group-title{
         display: flex;
         flex-direction: column;
         gap: 50px;
         justify-content: center;
         align-items: center;
         margin-top: 100px;
-
       }
 
       .search-bar {
@@ -82,13 +80,22 @@
         height: 100px;
         padding: 30px;
         display: none;
-
       }
 
+      .title-search {
+        border: none;
+        display: none;
+        border-radius: 10px;
+        font-size: 40px;  
+        width: 440px;
+        height: 40px;
+        background-color: rgb(131, 74, 185);
+        color: black; 
+        padding: 30px;
+        transition: 0.5s;
+      }
 
-
-
-    </style>
+      </style>
 
   </head>
   <body>
@@ -98,11 +105,13 @@
 
     <input type="text" placeholder="Search..." class="search-bar">
 
-    <div class="button-group">
-      <button class="btn">
+    <div class="button-group-title title-text-hide">
+      <button class="btn adding-title-btn">
         add a piano piece +
       </button>
-      
+
+      <input type="text" placeholder="Title of piece..." class="title-search">
+
       <a href="pieces.html">
         <button class="btn">
           your repertoire
@@ -110,7 +119,19 @@
       </a>
     </div>
 
-    <input type="text" class="title-input" placeholder="Piece title...">
+    <script>
+      const pianoadder = document.querySelector(".adding-title-btn")
+
+      const texttitle = document.querySelector(".title-search")
+
+      pianoadder.addEventListener("click", function() {
+        pianoadder.style.display = "none"
+        texttitle.style.display = "block"
+      })
+        
+        
+      
+    </script>
     
   </body>
 </html>
